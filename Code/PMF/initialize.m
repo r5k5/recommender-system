@@ -1,6 +1,6 @@
 function [A,I,n,m] = initialize()
 
-load('rating.txt');
+load('filmtrust/rating.txt');
 
 n=max(rating(:,1));     %no of users
 m=max(rating(:,2));     %no of distinct items

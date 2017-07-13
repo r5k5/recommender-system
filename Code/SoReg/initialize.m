@@ -1,10 +1,10 @@
 function [A,R_bar,I,T,n,m] = initialize()
 
-load('uir.txt');
-load('social.txt');
+load('filmtrust/rating.txt');
+load('filmtrust/social.txt');
 
-n=max(uir(:,1));    %no of users
-m=max(uir(:,2));    %no of distinct items
+n=max(rating(:,1));    %no of users
+m=max(rating(:,2));    %no of distinct items
 A = zeros(n,m);
 mtemp=ones(m,1);
 I=zeros(n,m);
@@ -14,8 +14,8 @@ for i=1:size(social,1)
     T(social(i,1),social(i,2))=1;
 end
 
-for i=1:size(uir,1)
-    A(uir(i,1),uir(i,2))=uir(i,3);
+for i=1:size(rating,1)
+    A(rating(i,1),rating(i,2))=rating(i,3);
 end
 
 for i=1:n

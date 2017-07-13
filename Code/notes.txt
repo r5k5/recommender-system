@@ -1,0 +1,14 @@
+PMF -> does not use social information at all
+SocialMF -> uses social information without calculating similarity values
+SoReg -> uses social information with the help local similarity values
+SoRS -> uses social information with the help of global reputation and local similarity values
+
+socialMF and average based SoReg are almost similar. The only difference is that average based SoReg multiplies
+similarity values with the latent vectors of neighbours whereas socialMF does not multiply the similarity values.
+
+
+The average based SoReg model imposes a social regularization
+term to constrain user ui’s taste with the average taste
+of his/her friends. However, this approach is insensitive to
+those users whose friends have diverse tastes. Hence in order to tackle
+this problem individual based SoReg model is used.

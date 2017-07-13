@@ -1,7 +1,7 @@
 function [U,V,k,delta,x1,x2] = parameters()
 
-load('X.mat');
-load('Y.mat');
+load('filmtrust/X.mat');
+load('filmtrust/Y.mat');
 
 k=10;            %no of latent factors
 U=X;             %user latent factor matrix
